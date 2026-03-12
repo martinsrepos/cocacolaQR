@@ -83,9 +83,9 @@ h2 { font-size: clamp(22px, 5vw, 30px); }
 }
 
 .hero-can {
-  width: clamp(160px, 42vw, 230px);
+  width: 200px;
   position: absolute;
-  bottom: clamp(120px, 26vw, 160px);
+  bottom: 150px;
   z-index: 0;
 }
 
