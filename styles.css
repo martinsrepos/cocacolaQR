@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 16px 48px;
+  padding: clamp(12px, 2vw, 24px) 16px 48px;
 }
 
 .demo-header {
@@ -32,6 +32,8 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .demo-title {
@@ -61,35 +63,19 @@ body {
 }
 
 .phone-frame {
-  width: 430px;
-  height: 932px;
+  width: min(430px, 100%);
+  aspect-ratio: 430 / 932;
   background: var(--bg);
-  border-radius: 40px;
+  border-radius: clamp(26px, 6vw, 40px);
   box-shadow: 0 40px 80px rgba(10, 12, 18, 0.18);
   position: relative;
   overflow: hidden;
-  padding: 20px 20px 24px;
-}
-
-.web-bar {
-  margin: 0 auto 8px;
-  height: 30px;
-  width: 230px;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0 12px;
-  color: var(--muted);
-  font-size: 12px;
-  box-shadow: 0 6px 16px rgba(10, 12, 18, 0.1);
+  padding: clamp(16px, 3vw, 20px) clamp(14px, 3vw, 20px) clamp(18px, 4vw, 24px);
 }
 
 .screen {
   position: absolute;
-  inset: 60px 20px 24px 20px;
+  inset: clamp(16px, 3vw, 20px) clamp(14px, 3vw, 20px) clamp(18px, 4vw, 24px);
   opacity: 0;
   transform: translateX(24px);
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -105,13 +91,13 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10px, 2vw, 16px);
 }
 
 .logo {
-  width: 180px;
+  width: clamp(140px, 32vw, 180px);
   align-self: center;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 h1, h2 {
@@ -120,14 +106,14 @@ h1, h2 {
   line-height: 1.1;
 }
 
-h1 { font-size: 30px; text-align: center; }
+h1 { font-size: clamp(22px, 5vw, 30px); text-align: center; }
 
-h2 { font-size: 30px; }
+h2 { font-size: clamp(22px, 5vw, 30px); }
 
 .sub {
   margin: 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: clamp(13px, 3vw, 16px);
   line-height: 1.5;
 }
 
@@ -140,20 +126,20 @@ h2 { font-size: 30px; }
 }
 
 .hero-can {
-  width: 400px;
+  width: clamp(220px, 60vw, 300px);
   position: absolute;
-  bottom: 140px;
+  bottom: clamp(160px, 38vw, 190px);
 }
 
 .signin-panel {
   width: 100%;
   background: var(--panel);
   border-radius: var(--radius-lg);
-  padding: 18px;
+  padding: clamp(14px, 3vw, 18px);
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(8px, 2vw, 12px);
 }
 
 .btn {
@@ -162,7 +148,7 @@ h2 { font-size: 30px; }
   justify-content: center;
   gap: 12px;
   border-radius: 999px;
-  height: 52px;
+  height: clamp(44px, 9vw, 52px);
   border: none;
   background: #fff;
   font-weight: 600;
@@ -182,15 +168,16 @@ h2 { font-size: 30px; }
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  height: 56px;
-  font-size: 16px;
+  height: clamp(48px, 10vw, 56px);
+  font-size: clamp(14px, 3vw, 16px);
 }
 
 .btn-secondary {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.12);
-  height: 44px;
+  height: clamp(40px, 8vw, 44px);
   color: var(--text);
+  font-size: clamp(12px, 2.8vw, 14px);
 }
 
 .btn-icon {
@@ -202,7 +189,7 @@ h2 { font-size: 30px; }
   background: linear-gradient(135deg, #34a564, #1a7650);
   color: #fff;
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: clamp(16px, 4vw, 20px);
   box-shadow: var(--shadow);
 }
 
@@ -210,7 +197,7 @@ h2 { font-size: 30px; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: clamp(12px, 2.8vw, 14px);
   font-weight: 600;
 }
 
@@ -234,13 +221,13 @@ h2 { font-size: 30px; }
 }
 
 .kicker {
-  font-size: 12px;
+  font-size: clamp(11px, 2.6vw, 12px);
   opacity: 0.85;
   margin-top: 6px;
 }
 
-.reward-title { font-size: 22px; font-weight: 700; margin-top: 6px; }
-.reward-sub { font-size: 14px; opacity: 0.9; margin-top: 6px; }
+.reward-title { font-size: clamp(18px, 4vw, 22px); font-weight: 700; margin-top: 6px; }
+.reward-sub { font-size: clamp(12px, 3vw, 14px); opacity: 0.9; margin-top: 6px; }
 
 .bottom-block {
   margin-top: auto;
@@ -249,7 +236,7 @@ h2 { font-size: 30px; }
   gap: 10px;
 }
 
-.fine { font-size: 13px; color: var(--muted); text-align: center; margin: 0; }
+.fine { font-size: clamp(11px, 2.6vw, 13px); color: var(--muted); text-align: center; margin: 0; }
 
 .pill-success {
   align-self: center;
@@ -257,19 +244,19 @@ h2 { font-size: 30px; }
   color: #2f7559;
   padding: 6px 14px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: clamp(11px, 2.6vw, 13px);
   font-weight: 600;
 }
 
 .receipt-illustration {
   position: relative;
-  height: 200px;
+  height: clamp(170px, 40vw, 200px);
   margin-top: 8px;
 }
 
 .receipt-card {
-  width: 160px;
-  height: 180px;
+  width: clamp(130px, 32vw, 160px);
+  height: clamp(150px, 38vw, 180px);
   background: #fff;
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -292,7 +279,7 @@ h2 { font-size: 30px; }
 
 .scan-frame {
   position: absolute;
-  inset: 0 60px;
+  inset: 0 clamp(40px, 10vw, 60px);
   border: 3px solid rgba(246, 198, 182, 0.9);
   border-radius: 22px;
 }
@@ -311,7 +298,7 @@ h2 { font-size: 30px; }
   display: grid;
   place-items: center;
   gap: 4px;
-  font-size: 13px;
+  font-size: clamp(11px, 2.6vw, 13px);
   font-weight: 600;
 }
 
@@ -346,8 +333,8 @@ h2 { font-size: 30px; }
   font-size: 18px;
 }
 
-.reward-item .title { font-weight: 700; font-size: 16px; }
-.reward-item .desc { font-size: 13px; color: var(--muted); }
+.reward-item .title { font-weight: 700; font-size: clamp(13px, 3vw, 16px); }
+.reward-item .desc { font-size: clamp(11px, 2.6vw, 13px); color: var(--muted); }
 
 .confetti::before {
   content: "";
@@ -374,6 +361,5 @@ h2 { font-size: 30px; }
 }
 
 @media (max-width: 520px) {
-  .phone-frame { transform: scale(0.92); }
-  .demo-header { flex-direction: column; gap: 12px; }
+  .demo-header { justify-content: center; }
 }
