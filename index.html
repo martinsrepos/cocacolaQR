@@ -10,170 +10,155 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page">
-    <header class="demo-header">
-      <div class="demo-title">Coca-Cola QR Rewards</div>
-      <div class="demo-controls">
-        <button class="nav-btn" data-target="0">1</button>
-        <button class="nav-btn" data-target="1">2</button>
-        <button class="nav-btn" data-target="2">3</button>
-        <button class="nav-btn" data-target="3">4</button>
-        <button class="nav-btn" data-target="4">5</button>
+  <main class="app">
+    <!-- Screen 1 -->
+    <section class="screen is-active" id="screen-1">
+      <div class="screen-inner">
+        <img class="logo" src="assets/cocacola-logo.png" alt="Coca-Cola" />
+        <h1>Your Coca-Cola is unlocked.</h1>
+
+        <div class="hero-stack">
+          <img class="hero-can" src="assets/cocacola-can.png" alt="Coca-Cola can" />
+
+          <div class="signin-panel">
+            <button class="btn btn-outline" data-target="1">
+              <img src="assets/apple.svg" alt="Apple" class="btn-icon" />
+              <span>Continue with Apple</span>
+            </button>
+            <button class="btn btn-outline" data-target="1">
+              <img src="assets/google.png" alt="Google" class="btn-icon" />
+              <span>Continue with Google</span>
+            </button>
+            <button class="btn btn-outline" data-target="1">
+              <img src="assets/spotify.png" alt="Spotify" class="btn-icon" />
+              <span>Continue with Spotify</span>
+            </button>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main class="frame-wrap">
-      <div class="phone-frame">
-        <!-- Screen 1 -->
-        <section class="screen is-active" id="screen-1">
-          <div class="screen-inner">
-            <img class="logo" src="assets/cocacola-logo.png" alt="Coca-Cola" />
-            <h1>Your Coca-Cola is unlocked.</h1>
+    <!-- Screen 2 -->
+    <section class="screen" id="screen-2">
+      <div class="screen-inner">
+        <h2>Good morning Martin 👋</h2>
+        <p class="sub">Need focus for your morning meetings? Here’s something to keep you energized.</p>
 
-            <div class="hero-stack">
-              <img class="hero-can" src="assets/cocacola-can.png" alt="Coca-Cola can" />
-
-              <div class="signin-panel">
-                <button class="btn btn-outline" data-target="1">
-                  <img src="assets/apple.svg" alt="Apple" class="btn-icon" />
-                  <span>Continue with Apple</span>
-                </button>
-                <button class="btn btn-outline" data-target="1">
-                  <img src="assets/google.png" alt="Google" class="btn-icon" />
-                  <span>Continue with Google</span>
-                </button>
-                <button class="btn btn-outline" data-target="1">
-                  <img src="assets/spotify.png" alt="Spotify" class="btn-icon" />
-                  <span>Continue with Spotify</span>
-                </button>
-              </div>
+        <div class="reward-card">
+          <div class="reward-row">
+            <div class="spotify-badge">
+              <img src="assets/spotify-white.png" alt="Spotify" />
             </div>
+            <span>Spotify Premium</span>
+            <span class="pill">Premium</span>
           </div>
-        </section>
+          <div class="kicker">Coca-Cola × Spotify</div>
+          <div class="reward-title">Spotify Premium 30 minutes</div>
+          <div class="reward-sub">Ad-free listening. Focus mode on.</div>
+        </div>
 
-        <!-- Screen 2 -->
-        <section class="screen" id="screen-2">
-          <div class="screen-inner">
-            <h2>Good morning Martin 👋</h2>
-            <p class="sub">Need focus for your morning meetings? Here’s something to keep you energized.</p>
-
-            <div class="reward-card">
-              <div class="reward-row">
-                <div class="spotify-badge">
-                  <img src="assets/spotify-white.png" alt="Spotify" />
-                </div>
-                <span>Spotify Premium</span>
-                <span class="pill">Premium</span>
-              </div>
-              <div class="kicker">Coca-Cola × Spotify</div>
-              <div class="reward-title">Spotify Premium 30 minutes</div>
-              <div class="reward-sub">Ad-free listening. Focus mode on.</div>
-            </div>
-
-            <div class="bottom-block">
-              <button class="btn btn-primary" data-target="2">Activate Reward</button>
-              <p class="fine">This reward is personalized based on your location and preferences.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Screen 3 -->
-        <section class="screen" id="screen-3">
-          <div class="screen-inner">
-            <div class="pill-success">✓ Reward unlocked</div>
-            <h1>Upgrade your reward</h1>
-            <p class="sub">Upload your supermarket receipt to unlock VIP experiences.</p>
-
-            <div class="receipt-illustration">
-              <div class="receipt-card">
-                <span></span><span></span><span></span><span></span><span class="red"></span>
-              </div>
-              <div class="scan-frame"></div>
-            </div>
-
-            <div class="mini-cards">
-              <div class="mini-card">✨<span>Festivals</span></div>
-              <div class="mini-card">🎮<span>Gaming</span></div>
-              <div class="mini-card">⭐<span>VIP</span></div>
-            </div>
-
-            <div class="bottom-block">
-              <button class="btn btn-primary" data-target="3">Upload Receipt</button>
-              <button class="btn btn-secondary" data-target="4">Skip for now</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- Screen 4 -->
-        <section class="screen" id="screen-4">
-          <div class="screen-inner">
-            <div class="pill-success">✓ Receipt verified</div>
-            <h1>You’re in the Coca-Cola Inner Circle</h1>
-            <p class="sub">Our AI analyzed your receipt and unlocked premium rewards.</p>
-
-            <div class="rewards-list">
-              <div class="reward-item">
-                <div class="icon">🎟️</div>
-                <div>
-                  <div class="title">Festival Tickets</div>
-                  <div class="desc">VIP access to summer events</div>
-                </div>
-              </div>
-              <div class="reward-item">
-                <div class="icon">🎮</div>
-                <div>
-                  <div class="title">Gaming Events</div>
-                  <div class="desc">Exclusive esports tournaments</div>
-                </div>
-              </div>
-              <div class="reward-item">
-                <div class="icon">⭐</div>
-                <div>
-                  <div class="title">VIP Access</div>
-                  <div class="desc">Behind the scenes passes</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bottom-block">
-              <button class="btn btn-primary" data-target="4">View My Rewards</button>
-              <p class="fine">We’ll personalize future rewards based on your purchases.</p>
-            </div>
-          </div>
-          <div class="confetti"></div>
-        </section>
-
-        <!-- Screen 5 -->
-        <section class="screen" id="screen-5">
-          <div class="screen-inner">
-            <div class="pill-success">✓ Reward activated</div>
-            <h1>Your Spotify reward is ready.</h1>
-
-            <div class="reward-card">
-              <div class="reward-row">
-                <div class="spotify-badge">
-                  <img src="assets/spotify-white.png" alt="Spotify" />
-                </div>
-                <span>Spotify Premium</span>
-                <span class="pill">Premium</span>
-              </div>
-              <div class="kicker">Coca-Cola × Spotify</div>
-              <div class="reward-title">Spotify Premium 30 minutes</div>
-              <div class="reward-sub">Ad-free listening. Focus mode on.</div>
-            </div>
-
-            <p class="sub">You can upload a receipt later to unlock VIP experiences.</p>
-
-            <div class="bottom-block">
-              <button class="btn btn-primary" data-target="4">Open Spotify Reward</button>
-              <button class="btn btn-secondary" data-target="0">Upgrade Later</button>
-            </div>
-          </div>
-          <div class="bubbles"></div>
-        </section>
+        <div class="bottom-block">
+          <button class="btn btn-primary" data-target="2">Activate Reward</button>
+          <p class="fine">This reward is personalized based on your location and preferences.</p>
+        </div>
       </div>
-    </main>
-  </div>
+    </section>
+
+    <!-- Screen 3 -->
+    <section class="screen" id="screen-3">
+      <div class="screen-inner">
+        <div class="pill-success">✓ Reward unlocked</div>
+        <h1>Upgrade your reward</h1>
+        <p class="sub">Upload your supermarket receipt to unlock VIP experiences.</p>
+
+        <div class="receipt-illustration">
+          <div class="receipt-card">
+            <span></span><span></span><span></span><span></span><span class="red"></span>
+          </div>
+          <div class="scan-frame"></div>
+        </div>
+
+        <div class="mini-cards">
+          <div class="mini-card">✨<span>Festivals</span></div>
+          <div class="mini-card">🎮<span>Gaming</span></div>
+          <div class="mini-card">⭐<span>VIP</span></div>
+        </div>
+
+        <div class="bottom-block">
+          <button class="btn btn-primary" data-target="3">Upload Receipt</button>
+          <button class="btn btn-secondary" data-target="4">Skip for now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 4 -->
+    <section class="screen" id="screen-4">
+      <div class="screen-inner">
+        <div class="pill-success">✓ Receipt verified</div>
+        <h1>You’re in the Coca-Cola Inner Circle</h1>
+        <p class="sub">Our AI analyzed your receipt and unlocked premium rewards.</p>
+
+        <div class="rewards-list">
+          <div class="reward-item">
+            <div class="icon">🎟️</div>
+            <div>
+              <div class="title">Festival Tickets</div>
+              <div class="desc">VIP access to summer events</div>
+            </div>
+          </div>
+          <div class="reward-item">
+            <div class="icon">🎮</div>
+            <div>
+              <div class="title">Gaming Events</div>
+              <div class="desc">Exclusive esports tournaments</div>
+            </div>
+          </div>
+          <div class="reward-item">
+            <div class="icon">⭐</div>
+            <div>
+              <div class="title">VIP Access</div>
+              <div class="desc">Behind the scenes passes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-block">
+          <button class="btn btn-primary" data-target="4">View My Rewards</button>
+          <p class="fine">We’ll personalize future rewards based on your purchases.</p>
+        </div>
+      </div>
+      <div class="confetti"></div>
+    </section>
+
+    <!-- Screen 5 -->
+    <section class="screen" id="screen-5">
+      <div class="screen-inner">
+        <div class="pill-success">✓ Reward activated</div>
+        <h1>Your Spotify reward is ready.</h1>
+
+        <div class="reward-card">
+          <div class="reward-row">
+            <div class="spotify-badge">
+              <img src="assets/spotify-white.png" alt="Spotify" />
+            </div>
+            <span>Spotify Premium</span>
+            <span class="pill">Premium</span>
+          </div>
+          <div class="kicker">Coca-Cola × Spotify</div>
+          <div class="reward-title">Spotify Premium 30 minutes</div>
+          <div class="reward-sub">Ad-free listening. Focus mode on.</div>
+        </div>
+
+        <p class="sub">You can upload a receipt later to unlock VIP experiences.</p>
+
+        <div class="bottom-block">
+          <button class="btn btn-primary" data-target="4">Open Spotify Reward</button>
+          <button class="btn btn-secondary" data-target="0">Upgrade Later</button>
+        </div>
+      </div>
+      <div class="bubbles"></div>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>
