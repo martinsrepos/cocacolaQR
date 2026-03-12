@@ -10,7 +10,7 @@ function spawnConfetti(screen) {
   const confetti = screen.querySelector('.confetti');
   if (!confetti) return;
   confetti.innerHTML = '';
-  const colors = ['#f40000', '#ffc07a', '#78beff', '#d4efe4'];
+  const colors = ['#f40000', '#ff6a3d', '#ffc07a', '#f7e1d4'];
   for (let i = 0; i < 24; i += 1) {
     const piece = document.createElement('span');
     const fromLeft = i % 2 === 0;

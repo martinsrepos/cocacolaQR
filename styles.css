@@ -213,13 +213,13 @@ h2 { font-size: clamp(22px, 5vw, 30px); }
 
 .receipt-illustration {
   position: relative;
-  height: clamp(170px, 40vw, 200px);
-  margin-top: 8px;
+  height: 210px;
+  margin-top: 4px;
 }
 
 .receipt-card {
-  width: clamp(130px, 32vw, 160px);
-  height: clamp(150px, 38vw, 180px);
+  width: 150px;
+  height: 180px;
   background: #fff;
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -228,7 +228,7 @@ h2 { font-size: clamp(22px, 5vw, 30px); }
   padding: 20px 16px;
   position: absolute;
   left: 50%;
-  top: 10px;
+  top: 12px;
   transform: translateX(-50%);
 }
 
@@ -242,7 +242,7 @@ h2 { font-size: clamp(22px, 5vw, 30px); }
 
 .scan-frame {
   position: absolute;
-  inset: 0 clamp(40px, 10vw, 60px);
+  inset: 6px 70px 6px 70px;
   border: 3px solid rgba(246, 198, 182, 0.9);
   border-radius: 22px;
 }
