@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coca-Cola QR Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Inter, sans-serif;
+background:#f4f5f7;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.phone{
+width:390px;
+height:844px;
+background:white;
+border-radius:40px;
+box-shadow:0 20px 60px rgba(0,0,0,0.2);
+overflow:hidden;
+position:relative;
+}
+
+.screen{
+display:none;
+padding:30px;
+height:100%;
+box-sizing:border-box;
+text-align:center;
+}
+
+.active{
+display:block;
+}
+
+h1{
+font-size:34px;
+font-weight:800;
+color:#1b1f2a;
+margin-top:20px;
+}
+
+p{
+color:#6c7280;
+font-size:16px;
+line-height:1.4;
+}
+
+.badge{
+background:#e9f6ec;
+color:#4c7a52;
+display:inline-block;
+padding:8px 16px;
+border-radius:30px;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.button{
+background:#c9491c;
+color:white;
+padding:18px;
+border-radius:40px;
+margin-top:20px;
+font-weight:600;
+cursor:pointer;
+}
+
+.secondary{
+background:none;
+color:#6c7280;
+margin-top:10px;
+}
+
+.card{
+background:linear-gradient(135deg,#9ad67a,#1b2420);
+border-radius:30px;
+padding:30px;
+color:white;
+margin:30px 0;
+text-align:left;
+}
+
+.uploadbox{
+border:2px dashed #b7c8e8;
+border-radius:30px;
+padding:40px;
+margin:20px 0;
+}
+
+.reward{
+background:#f5f5f7;
+border-radius:20px;
+padding:18px;
+margin:12px 0;
+text-align:left;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<!-- SCREEN 1 -->
+
+<div id="screen1" class="screen active">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Coca-Cola_logo.svg" width="150">
+
+<h1>Your Coca-Cola is unlocked.</h1>
+
+<p>Sign in to unlock your reward</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Coca-Cola_can.svg/512px-Coca-Cola_can.svg.png" width="120" style="margin:30px 0">
+
+<div class="button" onclick="next(2)">Continue with Apple</div>
+<div class="button" onclick="next(2)">Continue with Google</div>
+<div class="button" onclick="next(2)">Continue with Spotify</div>
+
+</div>
+
+<!-- SCREEN 2 -->
+
+<div id="screen2" class="screen">
+
+<h1 style="font-size:28px">Good morning Martin 👋</h1>
+
+<p>Need focus for your morning meetings?<br>Here's something to keep you energized.</p>
+
+<div class="card">
+<h2>Spotify Premium</h2>
+<p>30 minutes<br>Ad-free listening. Focus mode on.</p>
+</div>
+
+<div class="button" onclick="next(3)">Activate Reward</div>
+
+<p style="margin-top:15px;font-size:13px">This reward is personalized based on your location and preferences.</p>
+
+</div>
+
+<!-- SCREEN 3 -->
+
+<div id="screen3" class="screen">
+
+<div class="badge">Reward unlocked</div>
+
+<h1>Upgrade your reward</h1>
+
+<p>Upload your supermarket receipt to unlock VIP experiences.</p>
+
+<div class="uploadbox">
+📷 Upload Receipt
+</div>
+
+<div style="display:flex;justify-content:space-around">
+
+<div class="reward">Festivals</div>
+<div class="reward">Gaming</div>
+<div class="reward">VIP</div>
+
+</div>
+
+<div class="button" onclick="next(4)">Upload Receipt</div>
+
+<div class="secondary" onclick="next(5)">Skip for now</div>
+
+</div>
+
+<!-- SCREEN 4 -->
+
+<div id="screen4" class="screen">
+
+<div class="badge">Receipt verified</div>
+
+<h1>You're in the Coca-Cola Inner Circle</h1>
+
+<p>Our AI analyzed your receipt and unlocked premium rewards.</p>
+
+<div class="reward">
+<strong>Festival Tickets</strong><br>
+VIP access to summer events
+</div>
+
+<div class="reward">
+<strong>Gaming Events</strong><br>
+Exclusive esports tournaments
+</div>
+
+<div class="reward">
+<strong>VIP Access</strong><br>
+Behind the scenes passes
+</div>
+
+<div class="button">View My Rewards</div>
+
+</div>
+
+<!-- SCREEN 5 -->
+
+<div id="screen5" class="screen">
+
+<div class="badge">Reward activated</div>
+
+<h1>Your Spotify reward is ready.</h1>
+
+<div class="card">
+<h2>Spotify Premium</h2>
+<p>30 minutes<br>Ad-free listening</p>
+</div>
+
+<p>You can upload a receipt later to unlock VIP experiences.</p>
+
+<div class="button">Open Spotify Reward</div>
+
+<div class="secondary">Upgrade Later</div>
+
+</div>
+
+</div>
+
+<script>
+
+function next(n){
+
+document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"))
+document.getElementById("screen"+n).classList.add("active")
+
+}
+
+</script>
+
+</body>
+</html>
