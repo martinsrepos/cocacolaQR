@@ -11,12 +11,14 @@ function spawnConfetti(screen) {
   if (!confetti) return;
   confetti.innerHTML = '';
   const colors = ['#f40000', '#ffc07a', '#78beff', '#d4efe4'];
-  for (let i = 0; i < 18; i += 1) {
+  for (let i = 0; i < 24; i += 1) {
     const piece = document.createElement('span');
-    piece.style.left = `${Math.random() * 100}%`;
-    piece.style.top = `${Math.random() * 30}%`;
+    const fromLeft = i % 2 === 0;
+    const x = fromLeft ? Math.random() * 12 : 88 + Math.random() * 12;
+    piece.style.left = `${x}%`;
+    piece.style.top = `${Math.random() * 20}%`;
     piece.style.background = colors[i % colors.length];
-    piece.style.animationDelay = `${Math.random() * 0.4}s`;
+    piece.style.animationDelay = `${Math.random() * 0.5}s`;
     confetti.appendChild(piece);
   }
 }
